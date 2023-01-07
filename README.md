@@ -87,5 +87,5 @@ Sends notifications to shops based on their current budget data.
 
 ```If the budget changes after a notification has already been sent, my solution is first check the notified amount for the shop in the t_budgets table. If the notified amount is less than 50% of the new budget amount, the function would update the notified amount in the t_budgets table with the new budget amount. If the notified amount is equal to or greater than 50% of the new budget amount, the function would print a message indicating that a notification has already been sent for that month. If the notified amount is equal to or greater than 100% of the new budget amount, the function would not send a notification or update the notified amount. This ensures that notifications are only sent once for each shop and month, even if the budget changes.```
 
-###Limitation
+### Limitation
 - The script only working `current_month_date` so we need current date data to send notification.
