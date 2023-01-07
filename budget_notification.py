@@ -8,7 +8,7 @@ def get_current_month_budgets_for_shop(date: str) -> List[Tuple[int, str, int, i
     """Gets the current month budget data for all online shops from the database.
 
     Parameters:
-        date (str): The month to get budget data for, in the format "YYYY-MM".
+        date (str): The month to get budget data for, in the format "YYYY-MM-DD".
 
     Returns:
         A list of tuples, where each tuple contains the shop ID, shop name, budget amount, amount spent, and
@@ -99,8 +99,7 @@ def send_notification(budget_data: List[Tuple[int, str, int, int, int]]):
         elif expenditures_percentage >= 100:
             handle_notification(shop_id, shop_name, budget_amount, amount_spent, expenditures_percentage)
             update_shop_status(shop_id)
-        else:
-            handle_notification(shop_id, shop_name, budget_amount, amount_spent, expenditures_percentage)
+
 
 
 if __name__ == "__main__":
